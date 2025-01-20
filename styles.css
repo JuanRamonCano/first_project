@@ -15,7 +15,7 @@ h1, h2 {
 
 header {
   text-align: center;
-  padding: 4rem 0;
+  padding: 4rem 2rem; /* Reduced padding on smaller screens */
   background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   border-bottom: 2px solid #4CAF50;
@@ -35,6 +35,39 @@ header p {
   margin-top: 1rem;
   font-weight: 300;
 }
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  header {
+    padding: 3rem 1rem; /* Adjust padding for smaller screens */
+  }
+
+  header h1 {
+    font-size: 3rem; /* Reduce font size for smaller screens */
+    letter-spacing: 2px; /* Slightly reduce letter spacing */
+  }
+
+  header p {
+    font-size: 1rem; /* Adjust the font size of the subtitle */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 2rem 1rem; /* Even smaller padding for very small screens */
+  }
+
+  header h1 {
+    font-size: 2.5rem; /* Further reduce font size for very small screens */
+    letter-spacing: 1px;
+  }
+
+  header p {
+    font-size: 0.9rem; /* Further adjust the font size of the subtitle */
+  }
+}
+
+/* The rest of the CSS remains the same */
 
 main {
   padding: 2rem;
