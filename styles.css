@@ -48,6 +48,14 @@ main {
 section {
   margin-bottom: 2rem;
   text-align: center;
+  opacity: 0; /* Start as invisible */
+  transform: translateY(50px); /* Start below */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position */
 }
 
 section h2 {
@@ -134,21 +142,28 @@ footer p {
   margin: 0;
 }
 
-/* Animations */
-@keyframes fadeIn {
+/* Scroll Animations */
+@keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 h1, h2, p {
-  animation: fadeIn 2s ease-out;
+  animation: fadeInUp 2s ease-out;
 }
 
 .email-form input[type="email"], .email-form button {
-  animation: fadeIn 2s ease-out;
+  animation: fadeInUp 2s ease-out;
   animation-delay: 1s;
+}
+
+/* Scroll-triggered animation */
+section.visible {
+  animation: fadeInUp 1s ease-out;
 }
