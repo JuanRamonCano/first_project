@@ -9,6 +9,19 @@ body {
   overflow-x: hidden;
 }
 
+.custom-link {
+  color: white; /* Default color */
+  text-decoration: none; /* Removes the underline */
+}
+
+.custom-link:visited {
+  color: yellow; /* Color after the link is clicked */
+}
+
+.custom-link:hover {
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
 h1, h2 {
   font-family: 'Roboto', sans-serif;
 }
